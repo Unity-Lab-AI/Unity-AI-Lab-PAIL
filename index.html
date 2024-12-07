@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Unity Chat Interface</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/chatInterface.css" />
+  </head>
+  <body>
+    <div
+      class="chat-container max-w-4xl mx-auto p-4 bg-zinc-900 text-gray-100 font-sans"
+    >
+      <div id="chat-layout" class="chat-layout">
+        <div class="chat-main">
+          <div id="chat-box" class="chat-box"></div>
+        </div>
+        <div class="code-panel">
+          <div class="code-panel-header">
+            <span class="code-panel-title">Code Display</span>
+            <div class="code-panel-controls">
+              <button class="control-btn" onclick="clearCodePanel()">
+                Clear
+              </button>
+            </div>
+          </div>
+          <div id="code-panel-content" class="code-panel-content">
+            <div class="code-panel-empty">No code to display</div>
+          </div>
+        </div>
+      </div>
+      <div class="input-area">
+        <textarea
+          id="chat-input"
+          placeholder="Type your message... (Shift+Enter for new line, Enter to send)"
+        ></textarea>
+      </div>
+      <div class="controls">
+        <div class="left-controls">
+          <button id="voice-toggle" class="control-btn" title="Toggle Voice">
+            🔊
+          </button>
+          <button id="clear-chat" class="control-btn" title="Clear Chat">
+            🗑️
+          </button>
+        </div>
+
+        <div class="nav-controls">
+          <button
+            id="nav-left"
+            class="nav-btn"
+            title="Show Chat"
+            onclick="toggleView('chat')"
+          >
+            ⬅️
+          </button>
+          <button
+            id="nav-right"
+            class="nav-btn"
+            title="Show Code"
+            onclick="toggleView('code')"
+          >
+            ➡️
+          </button>
+        </div>
+
+        <div class="menu-controls">
+          <select class="model-select">
+            <option value="unity" selected>Unity AI</option>
+          </select>
+
+          <select class="persona-select">
+            <option value="default">Unity Default</option>
+            <option value="1TNek5vvRFPJj1ArM7L6AfZE6UwXoPY8o9DOQyXU645o">
+              Unity is a Coder
+            </option>
+            <option value="1RH9jwM0pi6XIzQ9R_-5Fh9uPuMbdMXhbJ8-aFeuRC5w">
+              Unity is at Work
+            </option>
+            <option value="1NV-rZqYe5cQj_t4MKDvxxVdQ5b_NvJQPnANdq-7BReU">
+              Unity is in College
+            </option>
+            <option value="1AZ726jsi7WffaIPfpkYBKOCMF5bl-xeRmYo27n7F9-0">
+              Unity is a Druggy
+            </option>
+            <option value="1zQSbrmK0GIPMIJVVruERe_cTEqJe7unDTxU9i8bCpg8">
+              Unity is a Dog
+            </option>
+            <option value="1eVwCsxN9KNfTiBOTpIAfxXLGqMMVN9u8R_hi2UPGS7k">
+              Unity is a Cat
+            </option>
+            <option value="1tDjUqw9WKDlfoC79uTD5Rylk2YdRpIk9zzabLIRyyrg">
+              Unity is a Dummy
+            </option>
+            <option value="12vL_1WoINuPwIE0kEhaP4JVbTs2X_puDbNhQe8ZZ4Ec">
+              Unity is Sexy
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-jsx.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-sql.min.js"></script>
+
+    <script type="module" src="js/pollinations.js"></script>
+    <script type="module" src="js/AIHelpers.js"></script>
+  </body>
+</html>
