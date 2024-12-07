@@ -12,8 +12,108 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/chatInterface.css" />
+    <!-- Bootstrap CSS (CDN) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --win11-accent: #3b82f6;
+        --win11-bg: #1e1e1e;
+        --win11-glass: rgba(255, 255, 255, 0.05);
+        --win11-text: #e5e7eb;
+      }
+
+      html, body {
+        background-color: var(--win11-bg);
+        color: var(--win11-text);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .navbar {
+        background: var(--win11-glass);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+      }
+
+      .nav-link.active {
+        color: var(--win11-accent) !important;
+      }
+
+      .hero {
+        background: var(--win11-glass);
+        backdrop-filter: blur(20px);
+        border-radius: 1rem;
+        padding: 3rem;
+      }
+
+      .hero h1 {
+        font-weight: 700;
+        font-size: 2.5rem;
+        color: var(--win11-accent);
+      }
+
+      .hero p {
+        color: #cbd5e1;
+      }
+
+      .placeholder-section {
+        background: var(--win11-glass);
+        backdrop-filter: blur(20px);
+        border-radius: 1rem;
+        padding: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .placeholder-title {
+        color: var(--win11-accent);
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+
+      .placeholder-text {
+        color: #cbd5e1;
+      }
+
+      footer {
+        border-top: 1px solid rgba(255,255,255,0.1);
+        padding: 1rem 0;
+        text-align: center;
+        font-size: 0.9rem;
+        color: #9ca3af;
+      }
+    </style>
   </head>
   <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid px-4">
+          <a class="navbar-brand fw-bold" href="#" style="color: var(--win11-accent);">Unity AI Lab</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="../">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Chat</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
     <div
       class="chat-container max-w-4xl mx-auto p-4 bg-zinc-900 text-gray-100 font-sans"
     >
